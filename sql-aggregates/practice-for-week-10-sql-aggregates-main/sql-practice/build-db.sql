@@ -17,6 +17,11 @@ CREATE TABLE toys (
   FOREIGN KEY (cat_id) REFERENCES cats(id) ON DELETE CASCADE
 );
 
+-- SELECT cats.name, COUNT(toys.cat_id) AS num_of_toys from cats
+-- JOIN toys ON (cats.id = toys.cat_id)
+-- GROUP BY toys.cat_id
+-- HAVING num_of_toys > 1;
+
 -- Seed Data
 INSERT INTO cats
   (name, birth_year)
